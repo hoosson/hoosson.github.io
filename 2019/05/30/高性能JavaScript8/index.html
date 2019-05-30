@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>JavaScript 编程实践 | Hoosson</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第八章 Programming Practices 编程实践">
+<meta name="keywords" content="高性能JavaScript学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 编程实践">
+<meta property="og:url" content="https://hoosson.github.io/2019/05/30/高性能JavaScript8/index.html">
+<meta property="og:site_name" content="Hoosson">
+<meta property="og:description" content="第八章 Programming Practices 编程实践">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-30T08:55:11.542Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 编程实践">
+<meta name="twitter:description" content="第八章 Programming Practices 编程实践">
+  
+    <link rel="alternative" href="/atom.xml" title="Hoosson" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/qqhead.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+  
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85415703-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head></html>
+
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/qqhead.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Bboy Xun</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="#" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="#" title="qq">qq</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Electron/" style="font-size: 10px;">Electron</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/兼容性/" style="font-size: 16.67px;">兼容性</a> <a href="/tags/没事瞎扯/" style="font-size: 10px;">没事瞎扯</a> <a href="/tags/高性能JavaScript学习笔记/" style="font-size: 20px;">高性能JavaScript学习笔记</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/qqhead.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Bboy Xun</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="#" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="#" title="qq">qq</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-高性能JavaScript8" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/05/30/高性能JavaScript8/" class="article-date">
+  	<time datetime="2019-05-30T11:21:18.000Z" itemprop="datePublished">2019-05-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript 编程实践
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高性能JavaScript学习笔记/">高性能JavaScript学习笔记</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/高性能JavaScript-8/">高性能JavaScript-8</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第八章 Programming Practices 编程实践<br><a id="more"></a></p>
+<h2 id="第八章-Programming-Practices-编程实践"><a href="#第八章-Programming-Practices-编程实践" class="headerlink" title="第八章 Programming Practices 编程实践"></a>第八章 Programming Practices 编程实践</h2><p>每种编程语言都有痛点，而且低效模式随着时间的推移不断发展。其原因在于，越来越多的人们开始使用这种语言，不断扩种它的边界。自 2005 年以来，当术语“Ajax”出现时，网页开发者对 JavaScript 和浏览器的推动作用远超过以往。其结果是出现了一些非常具体的模式，即有优秀的做法也有糟糕的做法。这些模式的出现，是因为网络上 JavaScript 的性质决定的。</p>
+<ul>
+<li><p>JavaScript与许多脚本语言一样，允许你在程序中获取一个包含代码的字符串然后运行它。有四种标准方法可以实现： eval_r()， Function()构造器， setTimeout()和 setInterval()。每个函数允许你传入一串 JavaScript代码，然后运行它。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var num1 = 5,</span><br><span class="line">num2 = 6,</span><br><span class="line">//eval_r() evaluating a string of code</span><br><span class="line">result = eval_r(&quot;num1 + num2&quot;),</span><br><span class="line">//Function() evaluating strings of code</span><br><span class="line">sum = new Function(&quot;arg1&quot;, &quot;arg2&quot;, &quot;return arg1 + arg2&quot;);</span><br><span class="line">//setTimeout() evaluating a string of code</span><br><span class="line">setTimeout(&quot;sum = num1 + num2&quot;, 100);</span><br><span class="line">//setInterval() evaluating a string of code</span><br><span class="line">setInterval(&quot;sum = num1 + num2&quot;, 100);</span><br></pre></td></tr></table></figure>
+<p>  大多数情况下，没必要使用 eval_r()或 Function()，如果可能的话，尽量避免使用它们。至于另外两个函数，setTimeout()和 setInterval()，第一个参数传入一个函数而不是一个字符串。例如：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	sum = num1 + num2;</span><br><span class="line">&#125;, <span class="number">100</span>);</span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	sum = num1 + num2;</span><br><span class="line">&#125;, <span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>尽量使用对象直接量。这样可以提高性能，同时减少代码量。</p>
+</li>
+<li><p>不要做重复的工作。下面例子解决重复工作的问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addHandler</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (target.addEventListener)&#123; <span class="comment">//DOM2 Events</span></span><br><span class="line">		target.addEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123; <span class="comment">//IE</span></span><br><span class="line">		target.attachEvent(<span class="string">"on"</span> + eventType, handler);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeHandler</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (target.removeEventListener)&#123; <span class="comment">//DOM2 Events</span></span><br><span class="line">		target.removeEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123; <span class="comment">//IE</span></span><br><span class="line">		target.detachEvent(<span class="string">"on"</span> + eventType, handler);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  隐藏的性能问题在于每次函数调用时都执行重复工作。每一次，都进行同样的检查，看看某种方法是否存在。如果你假设 target 唯一的值就是 DOM 对象，而且用户不可能在页面加载时魔术般地改变浏览器，那么这种判断就是重复的。如果 addHandler()一上来就调用addEventListener()那么每个后续调用都要出现这句代码。在每次调用中重复同样的工作是一种浪费，有多种办法避免这一点。</p>
+<p>  可以使用延迟加载：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addHandler</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">		<span class="comment">//overwrite the existing function</span></span><br><span class="line">	<span class="keyword">if</span> (target.addEventListener)&#123; <span class="comment">//DOM2 Events</span></span><br><span class="line">		addHandler = <span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">			target.addEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123; <span class="comment">//IE</span></span><br><span class="line">		addHandler = <span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">			target.attachEvent(<span class="string">"on"</span> + eventType, handler);</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//call the new function</span></span><br><span class="line">	addHandler(target, eventType, handler);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">removeHandler</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">		<span class="comment">//overwrite the existing function</span></span><br><span class="line">		<span class="keyword">if</span> (target.removeEventListener)&#123; <span class="comment">//DOM2 Events</span></span><br><span class="line">			removeHandler = <span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">				target.addEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">			&#125;;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123; <span class="comment">//IE</span></span><br><span class="line">			removeHandler = <span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">			target.detachEvent(<span class="string">"on"</span> + eventType, handler);</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//call the new function</span></span><br><span class="line">	removeHandler(target, eventType, handler);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  条件预加载：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addHandler = <span class="built_in">document</span>.body.addEventListener ?</span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">	target.addEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">&#125;:</span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">	target.attachEvent(<span class="string">"on"</span> + eventType, handler);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> removeHandler = <span class="built_in">document</span>.body.removeEventListener ?</span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">	target.removeEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">&#125;:</span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">target, eventType, handler</span>)</span>&#123;</span><br><span class="line">	target.detachEvent(<span class="string">"on"</span> + eventType, handler);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用位操作符可以提升性能。</p>
+</li>
+<li>尽量使用原生方法，可以提高性能。如Math.abs(num)等。</li>
+</ul>
+<hr>
+<h1 id="Summary-总结"><a href="#Summary-总结" class="headerlink" title="Summary 总结"></a>Summary 总结</h1><p>JavaScript 提出了一些独特的性能挑战，关系到你组织代码的方法。网页应用变得越来越高级，包含的<br>JavaScript 代码越来越多，出现了一些模式和反模式。请牢记以下编程经验：</p>
+<ul>
+<li>通过避免使用 eval_r()和 Function()构造器避免二次评估。此外，给 setTimeout()和 setInterval()传递函数参数而不是字符串参数。</li>
+<li>创建新对象和数组时使用对象直接量和数组直接量。它们比非直接量形式创建和初始化更快。</li>
+<li>避免重复进行相同工作。当需要检测浏览器时，使用延迟加载或条件预加载。</li>
+<li>当执行数学远算时，考虑使用位操作，它直接在数字底层进行操作。</li>
+<li>原生方法总是比 JavaScript 写的东西要快。尽量使用原生方法。</li>
+<li>本书涵盖了很多技术和方法，如果将这些优化应用在那些经常运行的代码上，你将会看到巨大的性能提升。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/30/高性能JavaScript4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          JavaScript 算法和流程控制的优化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/30/写代码强行装逼/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">写代码强行装逼</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="高性能JavaScript8" data-title="JavaScript 编程实践" data-url="https://hoosson.github.io/2019/05/30/高性能JavaScript8/" data-images="/img/qqhead.jpg" data-content="JavaScript 编程实践">
+    <div class="ds-share-inline">
+      <ul class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2019 Hoosson
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+  </div>
+  
+
+	<script type="text/javascript" src="/js/clicklove.js"></script> 
+
+
+</body>
+</html>
