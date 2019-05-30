@@ -203,7 +203,7 @@ a {
   display: none;
 }
 #container #mobile-nav .overlay {
-  height: 12%;
+  height: 150px;
   position: absolute;
   width: 100%;
   background: rgba(255,255,255,0.2);
