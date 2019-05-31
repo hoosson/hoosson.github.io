@@ -3,22 +3,24 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Category: hexo | Hoosson</title>
+  <title>hexo主题Yilia在移动端适配的一些事 | Hoosson</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="码农,Java,Hexo,个人博客,hexo博客。本站内容主要是热衷于分享一些Java学习知识点总结和笔记，以及分享一些博客搭建技巧，欢迎各位来访！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hoosson">
-<meta property="og:url" content="https://hoosson.github.io/categories/hexo/index.html">
+  <meta name="description" content="Yilia是我去年9月开发的主题，本来只是想给自己玩，因而开始有许多“任性”的设计。诸如“我本可以兼容ie，但我就不”这种…结果star数越来越多，半年里，居然成为了搜索“hexo-theme”最多star数的主题。感慨大家跟我一样任性的同时，也是受宠若惊，万分感谢！ 而年前的主要矛盾，是日益增多的star和fork数，与功能还未完善之间的矛盾；以及越来越多的bug被大家发现，与我忙得飞起只好假装">
+<meta name="keywords" content="hexo,主题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo主题Yilia在移动端适配的一些事">
+<meta property="og:url" content="https://hoosson.github.io/2017/05/29/yilia-on-mobile/index.html">
 <meta property="og:site_name" content="Hoosson">
-<meta property="og:description" content="码农,Java,Hexo,个人博客,hexo博客。本站内容主要是热衷于分享一些Java学习知识点总结和笔记，以及分享一些博客搭建技巧，欢迎各位来访！">
+<meta property="og:description" content="Yilia是我去年9月开发的主题，本来只是想给自己玩，因而开始有许多“任性”的设计。诸如“我本可以兼容ie，但我就不”这种…结果star数越来越多，半年里，居然成为了搜索“hexo-theme”最多star数的主题。感慨大家跟我一样任性的同时，也是受宠若惊，万分感谢！ 而年前的主要矛盾，是日益增多的star和fork数，与功能还未完善之间的矛盾；以及越来越多的bug被大家发现，与我忙得飞起只好假装">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-31T10:18:56.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hoosson">
-<meta name="twitter:description" content="码农,Java,Hexo,个人博客,hexo博客。本站内容主要是热衷于分享一些Java学习知识点总结和笔记，以及分享一些博客搭建技巧，欢迎各位来访！">
+<meta name="twitter:title" content="hexo主题Yilia在移动端适配的一些事">
+<meta name="twitter:description" content="Yilia是我去年9月开发的主题，本来只是想给自己玩，因而开始有许多“任性”的设计。诸如“我本可以兼容ie，但我就不”这种…结果star数越来越多，半年里，居然成为了搜索“hexo-theme”最多star数的主题。感慨大家跟我一样任性的同时，也是受宠若惊，万分感谢！ 而年前的主要矛盾，是日益增多的star和fork数，与功能还未完善之间的矛盾；以及越来越多的bug被大家发现，与我忙得飞起只好假装">
   
     <link rel="alternative" href="/atom.xml" title="Hoosson" type="application/atom+xml">
   
@@ -213,102 +215,112 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-yilia-on-mobile" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/29/hexo主题添加阅读数/" class="archive-article-date">
-  	<time datetime="2017-05-29T06:23:47.000Z" itemprop="datePublished">5月 29</time>
+    <div class="article-meta">
+      <a href="/2017/05/29/yilia-on-mobile/" class="article-date">
+  	<time datetime="2017-05-29T04:58:00.000Z" itemprop="datePublished">2017-05-29</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/29/hexo主题添加阅读数/">
-        为hexo-theme-smackdown主题添加阅读数
-        
-      </a>
-    </h1>
-  
-
-        <div class="article-info info-on-left">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/hexo/">hexo</a>
-	</div>
-
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/28/newHexo/" class="archive-article-date">
-  	<time datetime="2017-05-28T05:13:45.000Z" itemprop="datePublished">5月 28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/28/newHexo/">
-        搭建你的Hexo博客
-        
-          <span class="title-pop-out">[置顶]</span></a>
-        
+    <h1 class="article-title" itemprop="name">
+      hexo主题Yilia在移动端适配的一些事
       
     </h1>
   
 
-        <div class="article-info info-on-left">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/主题/">主题</a></li></ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/hexo/">hexo</a>
-	</div>
+        
 
-
-          
-        </div>
+        
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>是我去年9月开发的主题，本来只是想给自己玩，因而开始有许多“任性”的设计。诸如“我本可以兼容ie，但我就不”这种…<br>结果star数越来越多，半年里，居然成为了搜索“hexo-theme”最多star数的主题。<br>感慨大家跟我一样任性的同时，也是受宠若惊，万分感谢！</p>
+<p>而年前的主要矛盾，是日益增多的star和fork数，与功能还未完善之间的矛盾；以及越来越多的bug被大家发现，与我忙得飞起只好假装没发现这些bug的矛盾…</p>
+<p>默默放下抢红包的手机，还是决定先把关于hexo最想解决的三件事之一：移动端适配给做了。</p>
+<a id="more"></a>
+<p>##三件事</p>
+<p>话说这三件事一直有放在心上，是使用hexo时还不够满意的地方。<br><br>             </p>
+<ol>
+<li><strong>移动端适配。</strong>就很多主题来看，响应式布局就等同于移动端适配，这是远远不足够的。布局影响的仅仅是视觉，还必须有特有的交互逻辑，以适应大家的操作习惯。</li>
+<li><strong>seo。</strong>hexo的seo还比较弱，description需要支持文章自定义比较稳妥，而把标签云塞到keyword里面去是个好想法。</li>
+<li><strong>模块化加载。</strong>把fancybox，jiathis，duoshuo这些给延迟加载，移动端和pc端js分离。就瀑布图来看，是有信心提速20%-30%的。<br><br></li>
+</ol>
+<p>##移动端适配</p>
+<p>关于适配着重在这些方面：</p>
+<ul>
+<li>滚动时视觉感官上的流畅性</li>
+<li>便于单手操作</li>
+<li>次要信息在左侧边栏的收纳管理</li>
+</ul>
+<video controls autoplay name="media"><source src="/assets/video/yilia-mobile.mp4" type="video/mp4"></video>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/29/hexo主题添加阅读数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          为hexo-theme-smackdown主题添加阅读数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/28/关于主题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于 smackdown 主题</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="yilia-on-mobile" data-title="hexo主题Yilia在移动端适配的一些事" data-url="https://hoosson.github.io/2017/05/29/yilia-on-mobile/" data-images="/img/qqhead.jpg" data-content="hexo主题Yilia在移动端适配的一些事">
+    <div class="ds-share-inline">
+      <ul class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -334,10 +346,10 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false
 	}
 </script>
